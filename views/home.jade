@@ -1,0 +1,28 @@
+extends publicLayout
+block content
+  .default-page
+      .main.container.clearfix
+        h2  Get Started ! 
+               
+        ul.getting-started
+          li.clearfix
+            .step
+              .sprite.one
+              
+              h3 Find a Game !
+              br            
+              form(role='form' method='post' action="/search-string")       
+                div.form-group
+                  label(for='string') Location
+                  input.form-control(type='text' placeholder='-- Enter Postal Code or Address --' id='string' name='string')
+                button.btn.btn-default(type=submit) Search
+
+          li.clearfix
+            .step
+              .sprite.two
+                                 
+              h3 Host an Event
+              br 
+
+        // If link section to the right include line below (and adjust Links.jade file as required) //
+        include Links

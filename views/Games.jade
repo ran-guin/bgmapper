@@ -1,0 +1,19 @@
+extends publicLayout
+block content
+
+	.container
+		table.table(width='100%')
+			tr
+				td(width='70%')
+
+					h3 Available Games Nearby:
+					button(type='button' onclick="load_location()") Load Marker
+				
+
+					div#googleMap(style="width:500px;height:380px;")
+				td(width='30%')
+					include Links
+
+					b Games: #{JSON.stringify(games)}
+					hr
+					b Boxes: #{JSON.stringify(boxes)}
